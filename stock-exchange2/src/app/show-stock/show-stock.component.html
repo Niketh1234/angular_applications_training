@@ -1,0 +1,40 @@
+<div class="cardContainer">
+  @for(s of stocks;track $index){
+  <div class="card" style="width: 14rem">
+    <div class="card-body">
+      <h5 class="card-title">{{ s.code }}</h5>
+      <h5 *ngIf="!isEditable" class="card-title">{{ s.company }}</h5>
+      <input type="text" *ngIf="isEditable" value="{{ s.company }}" />
+      <h5 *ngIf="!isEditable" class="card-title">{{ s.iprate }}</h5>
+      <input type="text" *ngIf="isEditable" value="{{ s.iprate }}" />
+      <h5 *ngIf="!isEditable" class="card-title">{{ s.faceValue }}</h5>
+      <input type="text" *ngIf="isEditable" value="{{ s.faceValue }}" />
+      @if(!isEditable){
+      <button
+        class="btn btn-success"
+        style="margin-left: 15px"
+        (click)="editHandler()"
+      >
+        Edit
+      </button>
+      <button class="btn btn-danger" style="margin-left: 15px">Delete</button>
+      } @else{
+      <button
+        class="btn btn-success"
+        style="margin-left: 15px"
+        (click)="editHandler()"
+      >
+        Update
+      </button>
+      <button
+        class="btn btn-danger"
+        style="margin-left: 15px"
+        (click)="cancelHandler()"
+      >
+        Cancel
+      </button>
+      }
+    </div>
+  </div>
+  }
+</div>

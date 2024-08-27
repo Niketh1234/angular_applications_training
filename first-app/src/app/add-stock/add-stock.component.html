@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="form-group">
+    Code :
+    <input
+      type="text"
+      name=""
+      id=""
+      value="{{ s.code }}"
+      (input)="readCode($event)"
+    />
+  </div>
+  <div class="form-group">
+    Name :
+    <input
+      type="text"
+      name=""
+      id=""
+      value="{{ s.name }}"
+      (input)="readName($event)"
+    />
+  </div>
+  <div class="form-group">
+    Initial price :
+    <input
+      type="text"
+      name=""
+      id=""
+      value="{{ s.initialPrice }}"
+      (input)="readInitialPrice($event)"
+    />
+  </div>
+  <div class="form-group">
+    Face value :
+    <input
+      type="text"
+      name=""
+      id=""
+      value="{{ s.faceValue }}"
+      (input)="readFaceValue($event)"
+    />
+  </div>
+  <div class="form-group">
+    <button type="button" class="btn btn-primary" on-click="addHandler()">
+      Add
+    </button>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem">
+  <h5 class="card-title">{{ s.code }}</h5>
+  <h4>{{ s.initialPrice }}</h4>
+  <h4>{{ s.faceValue }}</h4>
+  <a href="#" class="btn btn-primary">{{ s.name }}</a>
+</div>

@@ -1,0 +1,12 @@
+<div style="display: flex">
+  @for(s of stocks;track $index){
+  <div class="card" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">{{ s.code }}</h5>
+      <h5 class="card-title">{{ s.company }}</h5>
+      <h5 class="card-title">{{ s.iprate }}</h5>
+      <h5 class="card-title">{{ s.faceValue }}</h5>
+    </div>
+  </div>
+  }
+</div>
